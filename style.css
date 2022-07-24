@@ -22,6 +22,7 @@ p {
   color: black;
   font-family: var(--heading-font-family);
   font-size: 96px;
+  margin-top: -20px;
 }
 .main h2 {
   font-family: var(--default-font-family);
@@ -69,7 +70,7 @@ div .btn-branding-outline {
 }
 
 .description {
-  padding: 120px 60px;
+  padding: 0 60px;
 }
 
 @media (max-width: 900px) {
