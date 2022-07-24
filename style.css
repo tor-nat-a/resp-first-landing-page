@@ -44,11 +44,44 @@ div .btn-branding {
   padding: 10px 20px;
 }
 
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+.name-project{
+  font-size: 64px;
+  font-family: var(--heading-font-family);
+  margin-bottom: 55px;
+}
 
+.m-5 {
+  font-family: var(--default-font-family);
+  font-size: 18px;
+}
+div .mb-5 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+}
+div .btn-branding-outline {
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 10px 20px;
+}
 
-width: 200px;
-height: 63px;
+.description {
+  padding: 120px 60px;
+}
+
+@media (max-width: 900px) {
+  .main h1 {
+    font-size: 50px; 
+    line-height: 2; 
+  }
+  .description h2 {
+    font-size: 44px;
+  }
+  .description {
+    padding: 0;
+    text-align: center;
+  }
+}
