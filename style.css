@@ -54,6 +54,7 @@ p {
   margin: 30px;
 }
 .work-description {
+  font-family: var(--heading-font-family);
   margin-bottom: 50px;
   font-size: 64px;
   line-height: 80px;
