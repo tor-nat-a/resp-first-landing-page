@@ -73,10 +73,37 @@ div .btn-branding {
   padding: 10px 20px;
 }
 
-.name-project{
+.name-project {
   font-size: 64px;
   font-family: var(--heading-font-family);
   margin-bottom: 55px;
+}
+nav {
+  padding: 20px 0;
+}
+.logo {
+  max-height: 40px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin-left: 15px;
+}
+nav a {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--basic-color);
+  transition: all 100ms ease-in-out;
+}
+
+nav a:hover, nav li.active a {
+  color: var(--branding-color);
 }
 
 .m-5 {
@@ -103,8 +130,8 @@ div .btn-branding-outline {
 
 @media (max-width: 900px) {
   .main h1 {
-    font-size: 50px; 
-    line-height: 56px; 
+    font-size: 50px;
+    line-height: 56px;
   }
   .description h2 {
     font-size: 44px;
