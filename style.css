@@ -127,7 +127,43 @@ div .btn-branding-outline {
 .description {
   padding: 0 60px;
 }
-
+footer {
+  margin: 60px 0;
+}
+footer .contact-box {
+  background-color: var(--background-color);
+  padding: 30px 120px;
+  border-radius: 10px;
+}
+footer .contact-box p {
+  margin: 0;
+  font-size: 18px;
+}
+footer h4 {
+  font-size: 48px;
+}
+footer .email-link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+}
+footer .email-link:hover {
+  color: var(--branding-color);
+}
+footer .social-links a {
+  margin: 0 20px;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  color: var(--branding-color);
+  background-color: var(--background-color);
+  transition: all 150ms ease-in-out;
+}
+footer .social-links a:hover {
+  color: white;
+  background-color: var(--branding-color);
+}
 @media (max-width: 900px) {
   .main h1 {
     font-size: 50px;
