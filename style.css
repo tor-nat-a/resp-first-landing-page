@@ -1,11 +1,18 @@
 :root {
-  --basic-color: #272142;
-  --branding-color: #6c63ff;
+  --basic-color: #ffc2c2;
+  --branding-color: #ff2e63;
   --background-color: #f9f7fe;
-  --heading-font-family: "Playfair Display", serif;
-  --default-font-family: "Poppins", sans-serif;
+  --secondary-branding-color: #000066;
+  --heading-font-family: "Jura", sans-serif;
+  --default-font-family: "Work Sans", sans-serif;
 }
-
+body {
+  background-color: var(--background-color);
+}
+.title-page {
+  background-image: url(images/mohammad-rahmani-1bNQVGzuy0U-unsplash.jpg);
+  background-size: cover;
+}
 p {
   font-family: var(--default-font-family);
   font-size: 36px;
@@ -14,15 +21,18 @@ p {
 }
 
 .main {
-  background: var(--background-color);
   text-align: center;
   padding: 160px 20px;
+  margin-top: -50px;
 }
+
 .main h1 {
-  color: black;
+  color: white;
   font-family: var(--heading-font-family);
   font-size: 96px;
   margin-top: -20px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000066;
 }
 .main h2 {
   font-family: var(--default-font-family);
@@ -30,12 +40,19 @@ p {
   font-weight: 400;
   color: var(--basic-color);
 }
-.content-container {
-  padding: 160px 20px;
+
+.main-page {
+  background-color: var(--background-color);
 }
-.content h1 {
+.content-container {
+  padding: 50px 20px;
+}
+
+
+.content-container h1 {
   font-size: 64px;
   line-height: 80px;
+  font-family: var(--heading-font-family);
 }
 .content h2 {
   font-size: 18px;
@@ -49,6 +66,7 @@ p {
 }
 .content p {
   font-size: 14px;
+  font-family: var(--default-font-family);
 }
 .content {
   margin: 30px;
@@ -59,27 +77,47 @@ p {
   font-size: 64px;
   line-height: 80px;
 }
-.btn {
-  text-decoration: none;
-  font-weight: 400;
-  cursor: pointer;
-}
+
+
 div .btn-branding {
-  background: var(--branding-color);
-  border-radius: 4px;
-  color: white;
-  font-size: 18px;
-  line-height: 27px;
-  padding: 10px 20px;
+  box-sizing: border-box;
+-webkit-appearance: none;
+   -moz-appearance: none;
+        appearance: none;
+background-color: transparent;
+border: 2px solid #e74c3c;
+cursor: pointer;
+font-family: var(--default-font-family);
+font-size: 0.950em;
+line-height: 27px;
+margin: 0 20px;
+padding: 10px 20px;
+text-decoration: none;
+text-align: center;
+text-transform: uppercase;
+border-color: var(--branding-color);
+color: #fff;
+box-shadow: 0 0 40px 40px var(--branding-color) inset, 0 0 0 0 var(--branding-color);
+-webkit-transition: all 150ms ease-in-out;
+transition: all 150ms ease-in-out;
+}
+div .btn-branding:hover {
+color: var(--branding-color);
+box-shadow: 0 0 10px 0 var(--branding-color) inset, 0 0 10px 4px var(--branding-color);
+}
+div .btn-branding:hover, div .btn-branding:focus {
+outline: 0;
 }
 
+
 .name-project {
-  font-size: 64px;
+  font-size: 60px;
   font-family: var(--heading-font-family);
   margin-bottom: 55px;
 }
+
 nav {
-  padding: 20px 0;
+  padding: 0;
 }
 .logo {
   max-height: 40px;
@@ -92,18 +130,44 @@ nav li {
   display: inline;
   list-style: none;
   line-height: 42px;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 nav a {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 17px;
   text-decoration: none;
   color: var(--basic-color);
   transition: all 100ms ease-in-out;
+  position: relative;
+  cursor: pointer;
 }
 
-nav a:hover, nav li.active a {
+nav a:hover,
+nav li.active a {
   color: var(--branding-color);
+}
+
+nav a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: var(--basic-color);
+  transition: width 0.5s;
+}
+nav a:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: var(--branding-color);
+  transition: width 0.5s;
 }
 
 .m-5 {
@@ -115,14 +179,6 @@ div .mb-5 {
   font-weight: normal;
   line-height: 30px;
 }
-div .btn-branding-outline {
-  color: var(--branding-color);
-  border: 1px solid var(--branding-color);
-  border-radius: 4px;
-  font-size: 18px;
-  line-height: 27px;
-  padding: 10px 20px;
-}
 
 .description {
   padding: 0 60px;
@@ -131,7 +187,7 @@ footer {
   margin: 60px 0;
 }
 footer .contact-box {
-  background-color: var(--background-color);
+  background-color: var(--secondary-branding-color);
   padding: 30px 120px;
   border-radius: 10px;
 }
@@ -141,6 +197,7 @@ footer .contact-box p {
 }
 footer h4 {
   font-size: 48px;
+  color: white;
 }
 footer .email-link {
   text-decoration: none;
